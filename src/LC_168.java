@@ -7,11 +7,14 @@ class LC_168 {
         // String builder is usually faster than String because it tends to be varible
         StringBuilder result = new StringBuilder();
 
+        //map from 1-26 to 0-25
         while(n > 0) {
             n--;
             result.insert(0, (char) ('A' + n % 26));
             n/=26;
         }
+
+        //return a string type
         return result.toString();
     }
 }
